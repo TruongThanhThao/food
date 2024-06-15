@@ -1,0 +1,566 @@
+/*gg fonts*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+:root
+{
+    --main-color: #C11F2A;
+    --text--color: #333;
+    --bg--color: #fff;
+
+    --big--font: 4rem;
+    --h2--font: 2.24rem;
+    --p-font: 0.9rem;
+}
+body{
+    color: var(--text--color);
+    background: var(--bg--color);
+    justify-content: center;
+    align-items: center;
+}
+nav{
+    position: fixed;
+    height: 80px;
+    width: 100%;
+    z-index: 1000; /* Đảm bảo thanh nav nằm trên các phần tử khác */
+    background: #fff;
+}
+nav .logo{
+    padding: 0 50px;
+    width: auto;
+    height: 70px;
+}
+nav ul{
+    float: right;
+    margin-right: 20px;
+}
+nav ul li{
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 5px;
+}
+nav ul li a{
+    color: #333;
+    font-size: 17px;
+    padding: 7px 13px;
+}
+a:hover{
+    color: #C11F2A;
+}
+.checkbtn{
+    font-size: 30px;
+    color: #9c8f87;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+}
+#check{
+ display: none;
+}
+
+@media(max-with:952px){
+    nav .logo{
+        font-size: 30px;
+        padding-left: 20px;
+    }
+    nav ul li a{
+        font-size: 16px;
+    }
+}
+@media(max-width:858px){
+    .checkbtn{
+        display: block;
+    }
+    ul{
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        top: 80px;
+        left: -100%;
+        text-align: center;
+        background: #EFECEA;
+        transition: all .5s;
+    }
+    nav ul li{
+        display: block;
+        margin: 40px 0;
+        line-height: 30px;
+    }
+    nav ul li a{
+        font-size: 20px;
+    }
+    a:hover,a.active{
+        background: none;
+    }
+    #check:checked ~ ul{
+        left: 0;
+    }
+}
+
+/*Banner*/
+.banner {
+    height: calc(100vh -80px);
+    display: flex;
+    align-items: center;
+    background-image: url('../img/brg1.png'); 
+    background-size: cover; /* Đảm bảo hình nền phủ đầy phần */
+    background-position: center; /* Canh giữa hình nền */
+    padding-top: 90px;
+    padding-left: 8%;
+}
+
+.banner-img img {
+    width: 100%;
+    transition: opacity 1s ease, transform 1s ease;
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+.text {
+    padding-left: 10px;
+    color: black;
+    margin: 8% -10% 15% -10%;
+    transition: opacity 1s ease, transform 1s ease;
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+.home-img img {
+    width: 150%;
+    margin-left: 8%;
+    transition: opacity 1s ease, transform 1s ease;
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+button {
+    width: 120px;
+    height: 40px;
+    background: #b09d92;
+    border: none;
+    border-radius: 15px; /* Bo tròn 15px */
+    margin: 2%;
+    transition: opacity 1s ease, transform 1s ease; /* Thêm hiệu ứng chuyển động */
+    opacity: 0; /* Bắt đầu với opacity 0 */
+    transform: translateY(20px); /* Bắt đầu với dịch chuyển xuống 20px */
+}
+
+.btn {
+    margin-left: 10%;
+}
+
+.btn a button {
+    display: inline-block;
+}
+
+button:hover {
+    background: #9c8f87;
+}
+
+.banner::after {
+    content: "";
+    display: table;
+    clear: both;
+    width: 100%;
+}
+
+.abc1 {
+    width: 100%;
+    margin: 0 5% 0 4%;
+    float: left;
+}
+
+.abc2 {
+    width: 120%;
+    float: left;
+    margin-left: 4%;
+}
+
+/* Hiệu ứng khi tải trang */
+.banner.show .banner-img img, 
+.banner.show .home-img img, 
+.banner.show .text, 
+.banner.show button {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+
+/* Sản phẩm thương hiệu */
+.spthuonghieu{
+    width: auto;
+    height: auto;
+    display:  grid;
+    align-items: center;
+    background-image: url('../img/bgr2.png');  
+    background-size: cover;  /* Đảm bảo hình nền phủ đầy phần */
+    background-position: center;  /* Canh giữa hình nền */
+    padding: 0% 0 0 5%;  
+}
+.noibat h1{
+    color: #C11F2A;
+    padding: 20px;
+}
+.noibat p{
+    color: black;
+    margin-bottom: 20px;
+    max-width: 80%; /* Giới hạn độ rộng của thẻ p */
+    margin: 0 auto; /* Canh giữa */
+}
+
+
+.hanoicogi {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap; /* Đảm bảo các phần tử con sẽ bao lại khi không đủ không gian */
+    align-items: center;
+    padding: 20px;
+    transition: opacity 1s ease, transform 1s ease;
+    opacity: 0;
+    transform: translateY(20px);
+}
+.noibat img {
+    width: 100%;
+    height: auto; 
+    transition: transform 0.3s ease;
+}
+.noibat img:hover{
+    transform: scale(1.1);
+}
+.noibat {
+    min-width: 50%; /* Chiếm 60% chiều rộng */
+    max-width: 50%; /* Chiếm 60% chiều rộng */
+    text-align: center; /* Canh giữa nội dung trong mỗi noibat */
+    display: inline-block; /* Hiển thị trên cùng một dòng */
+    font-size: 16px; /* Đặt lại kích thước font */
+} 
+
+
+
+.spnoibat {
+    font-size: 0; /* Loại bỏ khoảng trắng giữa các div */
+    transition: opacity 1s ease, transform 1s ease;
+    opacity: 0;
+    transform: translateY(20px);
+}
+.sp {
+    display: inline-block;
+    vertical-align: top; /* Canh dọc ở đỉnh */
+    width: 30%; /* Phân chia ngang thành 3 phần bằng nhau */
+    margin: 0 1%; /* Khoảng cách giữa các sp */
+    font-size: 16px; /* Đặt lại kích thước font */
+    text-align: center; 
+    border-radius: 30px;
+    box-sizing: border-box; /* Đảm bảo padding và border không làm thay đổi kích thước của div */
+    padding: 20px 10px; /* Thêm padding cho mỗi sp */
+    transition: background-color 0.3s ease; /* Hiệu ứng chuyển đổi khi nền thay đổi */
+    background-color: transparent; /* Nền mặc định */
+}
+.sp:hover{
+    background-color: #b09d92;
+}
+.sp:hover h3 {
+    color: #fff;
+}
+.sp p {
+    color: black;
+    padding-bottom: 20px;
+}
+.sp h3{
+    color: #9c8f87;
+    margin: 20px 0 20px 0;
+}
+.img-sp img{
+    width: 70%;
+    height: auto;
+    display: block; /* Đặt ảnh làm phần tử block */
+    margin-left: auto; /* Căn lề trái tự động */
+    margin-right: auto; /* Căn lề phải tự động */
+} 
+
+/* Hiệu ứng khi tải trang */
+.spthuonghieu.show .hanoicogi, 
+.spthuonghieu.show .spnoibat, 
+.spthuonghieu.show button {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+
+/*lý do chọn*/
+.lydochon{
+    width: auto;
+    height: auto;
+    display:  grid;
+    align-items: center;
+    background-image: url('../img/bgr3.png');  
+    background-size: cover;  /* Đảm bảo hình nền phủ đầy phần */
+    background-position: center;  /* Canh giữa hình nền */
+}
+.lydochon.show .hanoicogi, 
+.lydochon.show .spnoibat, 
+.lydochon.show button {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Đánh giá */
+.container{
+    height: auto;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 20px;
+}
+.testimonial{
+    position: relative;
+    max-width: 900px;
+    width: 100%;
+    padding: 50px 0;
+    row-gap: 30px;
+    overflow: hidden;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 1s ease, transform 1s ease;
+}
+.testimonial .image{
+    height: 170px;
+    width: 170px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+.testimonial .slide{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    row-gap: 30px;
+}
+.slide p {
+    text-align: center;
+    padding: 0 100px;
+    font-size: 16px;
+    font-weight: 400;
+    color: #333;
+}
+.slide .quote-icon{
+    font-size: 30px;
+    color: #C11F2A;
+}
+.slide .detail{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+.detail .name{
+    font-size: 16px;
+    font-weight: 600;
+    color: #9c8f87;
+}
+.detail .job{
+    font-size: 14px;
+    font-weight: 400;
+    color: #9c8f87;
+}
+/* màu của thanh chuyển đánh giá */
+.swiper-pagination-bullet{
+    background-color: rgba(0, 0, 0, 0.8);
+}
+.swiper-pagination-bullet-active{
+    background-color: #C11F2A;
+}
+.nav-btn{
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    transform: translateY(30px);
+    transition: 2s;
+}
+.nav-btn:hover{
+    background-color: rgba(0, 0, 0, 0.2);
+}
+.nav-btn::after,
+.nav-btn::before{
+    font-size: 20px;
+    color: #C11F2A;
+}
+.testimonial.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+.s-box p{
+    color: black;
+    max-width: 90%; /* Giới hạn độ rộng của thẻ p */
+    margin: 0 auto; /* Canh giữa */
+}
+
+
+/* Servies */
+.service{
+    background: #EFECEA;
+}
+.heading {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding-top: 30px;
+    transition: opacity 1s ease, transform 1s ease;
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+.servives-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px,auto));
+    gap: 1.5rem;
+    margin: 20px 5% 0 5%;
+    padding-bottom: 20px;
+    transition: opacity 1s ease, transform 1s ease;
+    opacity: 0;
+    transform: translateY(20px);
+}
+.s-box{
+    text-align: center;
+}
+.s-box img{
+    height: 100px;
+    width: auto;
+    padding-bottom: 20px;
+}
+.s-box h3{
+    margin: 4px 0 10px;
+}
+.service.show .heading, 
+.service.show .servives-container{
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+
+/*footer*/
+footer{
+    background: #EFECEA;
+}
+footer .imgft{
+    width: auto;
+    height: 70px;
+}
+footer .footer-info{
+    display: flex;         
+    justify-content: center; 
+    align-items: center;   
+    padding: 50px 10px 10px 10px;          
+    transition: opacity 1s ease, transform 1s ease;
+    opacity: 0;
+    transform: translateY(20px);
+}
+.a{
+    font-size: 0; /* Loại bỏ khoảng trắng giữa các div */
+    transition: opacity 1s ease, transform 1s ease;
+    opacity: 0;
+    transform: translateY(20px);
+}
+.ft {
+    display: inline-block;
+    vertical-align: top; /* Canh dọc ở đỉnh */
+    width: 33%;
+    font-size: 16px; /* Đặt lại kích thước font */
+    box-sizing: border-box; /* Đảm bảo padding và border không làm thay đổi kích thước của div */
+    padding-top: 15px;
+}
+  
+.footer-lienhe h3, .social-media h3{
+    color: #333;
+    margin: 15px 0 20px; 
+}
+.footer-lienhe a{
+    color: #333;
+}
+.contact-link:hover,
+.footer-lienhe p:hover,
+.footer-lienhe a:hover{
+    color: #C11F2A;
+}
+.social-media{
+    margin-top: 2%;
+}
+.social-media a i {
+    font-size: 2.5em; /* Điều chỉnh kích thước icon theo nhu cầu của bạn */
+    margin-right: 10px; /* Tạo khoảng cách giữa các icon */
+    color: #9c8f87; /* Màu icon có thể tùy chỉnh theo nhu cầu */
+    transition: color 0.3s ease;
+}
+.social-media a i:hover{
+    color: #C11F2A;
+}
+
+.social-media a:last-child i {
+    margin-right: 0; /* Xóa khoảng cách cho icon cuối cùng */
+}
+/* Để lại thông tin */
+.form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 10% 10px 5%;
+}
+.form-container input {
+    width: 100%;
+    max-width: 300px;
+    height: 40px;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #9c8f87;
+    box-sizing: border-box;
+    border-radius: 15px;
+}
+.footer.show .footer-info, 
+.footer.show .a, 
+.footer.show button {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+
+/* Backtop */
+#backToTopBtn {
+    display: none; /* Ẩn nút mặc định */
+    position: fixed; /* Cố định nút ở một vị trí cố định */
+    bottom: 20px; /* Cách đáy 20px */
+    right: 20px; /* Cách phải 20px */
+    z-index: 100; /* Đảm bảo nút nằm trên các phần tử khác */
+    background-color: #b09d92; /* Màu nền */
+    color: white; /* Màu chữ */
+    border: none; /* Không viền */
+    padding: 15px; /* Khoảng cách bên trong */
+    border-radius: 50%; /* Bo tròn */
+    cursor: pointer; /* Thay đổi con trỏ khi hover */
+    transition: opacity 0.3s; /* Hiệu ứng mờ dần */
+    font-size: 24px; /* Kích thước font cho biểu tượng */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#backToTopBtn:hover {
+    background-color: #9c8f87; /* Màu nền khi hover */
+}
+html {
+    scroll-behavior: smooth;
+}
+
+
+

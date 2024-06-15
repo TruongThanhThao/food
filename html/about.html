@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Về chúng tôi</title>
+    <!--box icon-->
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    <!--css-->
+    <link rel="stylesheet" href="../css/about.css">
+</head>
+<body>
+    <!--Navbar-->
+    <nav>
+        <input type="checkbox" id="check">
+        <label for="check" class="checkbtn" >
+            <i class='bx bx-menu'></i>
+        </label>
+        <img class="logo" src="../img/logo.png" alt="Logo">
+        <ul>
+            <li><a href="trangchu.html">Trang chủ</a></li>
+            <li><a href="about.html">Về chúng tôi</a></li>
+            <li><a href="menu.html">Thực đơn</a></li>
+            <li><a href="order.html">Đặt bàn</a></li>
+            <li><a href="contact.html">Liên hệ</a></li>
+            <li><a href="dangnhap.html"><i class='bx bx-user'></i></a></li>
+        </ul>
+    </nav>
+
+    <div class="about1">
+        <div class="text">
+            <h1>Vị Hà Nội</h1>
+            <p>Nằm giữa lòng phố Hàng Than và Yên Phụ, nhà hàng đậm chất lịch sử tỏa sáng. Tại phố Hàng Than, một trong 36 con phố cổ của Hà Nội, nơi vẫn lưu giữ hồn quê và tinh thần thương mại sôi động từ thời xa xưa. Đây là nơi thấu hiểu tinh hoa của văn hóa và sự kiêu hãnh của người dân Hà Nội với thành phố đẹp lịch sử và phong phú.</p>
+            <p>Hà Nội, trái tim chính trị và văn hóa của Việt Nam, là biểu tượng của sự thanh lịch trong khu vực châu Á. Ẩm thực ở đây không chỉ là ẩm thực mà còn là một cách sống, một nghệ thuật thăng trầm của hương vị và sự sáng tạo.</p>
+            <p>Nhà hàng Vị Hà Nội không chỉ đem đến những hương vị tinh túy nhất của Hà Nội mà còn kết hợp cả vị ngon của khắp các vùng miền Việt Nam. Thực đơn tại đây không chỉ là một bữa ăn, mà còn là một hành trình khám phá văn hóa ẩm thực đa dạng và phong phú của đất nước.</p>
+        </div>
+        <img src="../img/about1.jpg" alt="">
+    </div>
+
+    
+    <div class="about2">
+        <img src="../img/mamcom.jpg" alt="">
+        <div class="text2">
+            <p>Nhà hàng Vị Hà Nội hân hạnh được giới thiệu tới quý khách menu bao gồm những món ngon tinh hoa, mang đậm phong vị ẩm thực đặc trưng của từng vùng miền trên Tổ Quốc. Mọi món tại nhà hàng đều được đảm bảo mức độ tươi ngon cũng như chất lượng hảo hạng nhất, giúp quý khách ăn ngon mọi lúc, ăn sạch mọi nơi!</p>
+            <p>Trang danh mục: Nhà hàng Vị Hà Nội không chỉ mang đến những hương vị đặc sắc của một Hà Nội lịch sử, đó là "bức tranh" ẩm thực của Việt Nam từ khắp các miền để tạo nên trải nghiệm đáng nhớ nhất.</p>
+        </div>
+    </div>
+    
+    <footer>
+        <div class="footer">
+            <div class="footer-info" style="border-bottom: 1px solid #9c8f87;">
+                <img src="../img/logo.png" class="imgft">
+            </div>
+            <div class="a">
+                <div class="ft" style="padding: 20px 0 0 8%;">
+                    <div class="footer-lienhe">
+                        <h3>Thông tin liên hệ</h3>
+                        <a href="https://maps.app.goo.gl/5croaENqXXNmxHw36"><i class='bx bxs-map' style="padding-right: 10px;"></i>25 Nguyễn Trường Tộ, Ba Đình, Hà Nội.</a>
+                        <p style="padding: 10px 0 10px;"> <i class='bx bxs-phone' style="padding-right: 10px;"></i>Điện thoại: 0123 456 789</p>
+                        <a href="https://mail.google.com/mail/u/0/#inbox"><i class='bx bxs-envelope' style="padding-right: 10px;"></i>Email: viHaNoi@gamil.com</a>
+                    </div>
+                </div>
+                <div class="ft" style="padding-left: 12%;">
+                    <div class="social-media">
+                        <h3>Mạng xã hội</h3>
+                        <a href=""><i class='bx bxl-facebook-circle'></i></a>
+                        <a href=""><i class='bx bxl-instagram-alt' ></i></a>
+                        <a href=""><i class='bx bxl-twitter'></i></a>
+                    </div>
+                </div>
+                <div class="ft">
+                    <div class="form-container">
+                        <p style="padding-bottom: 10px;">Để lại thông tin để được nhận tư vấn!</p>
+                        <input type="text" placeholder="Tên của bạn">
+                        <input type="text" placeholder="Số điện thoại">
+                        <button id="btngui">Gửi thông tin</button></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <script>
+        const btnGui = document.getElementById('btngui');
+        const tenInput = document.querySelector('.form-container input[type="text"]'); // Assuming both inputs are within the form-container
+        const sdtInput = document.querySelector('.form-container input[type="text"] + input[type="text"]'); // Assuming phone number input comes after name input
+
+        btnGui.addEventListener('click', function() {
+        const ten = tenInput.value.trim();
+        const sdt = sdtInput.value.trim();
+
+        if (ten === '' || sdt === '') {
+        alert('Vui lòng nhập đầy đủ tên và số điện thoại!');
+        } else {
+        alert('Cảm ơn bạn đã quan tâm! Chúng tôi sẽ liên hệ với bạn sớm nhất có thể.');
+        tenInput.value = '';
+        sdtInput.value = '';
+        }
+        });
+
+        document.addEventListener("DOMContentLoaded", function() {
+        document.querySelector(".about1").classList.add("show");
+        });
+        document.addEventListener("DOMContentLoaded", function() {
+        document.querySelector(".about2").classList.add("show");
+        });
+    </script>
+</body>
+</html>

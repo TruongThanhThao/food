@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quên mật khẩu</title>
+    <link rel="stylesheet" href="../css/quenmk.css">
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+</head>
+<body>
+    <nav>
+        <input type="checkbox" id="check">
+        <label for="check" class="checkbtn" >
+            <i class='bx bx-menu'></i>
+        </label>
+        <img class="logo" src="../img/logo.png" alt="Logo">
+        <ul>
+            <li><a href="trangchu.html">Trang chủ</a></li>
+            <li><a href="about.html">Về chúng tôi</a></li>
+            <li><a href="menu.html">Thực đơn</a></li>
+            <li><a href="order.html">Đặt bàn</a></li>
+            <li><a href="contact.html">Liên hệ</a></li>
+            <li><a href="dangnhap.html"><i class='bx bx-user'></i></a></li>
+        </ul>
+    </nav>
+
+    <div class="container" id="container">
+        <form>
+            <h1>Bạn quên mật khẩu?</h1>
+            <span>Hãy nhập tài khoản email bạn sử dụng để chúng tôi có thể cấp lại mật khẩu.</span>
+            <input type="email" id="emailInput" placeholder="Email">
+            <a href="../html/dangnhap.html" class="button" id="submitButton">Gửi lại mật khẩu</a>
+        </form>
+    </div>
+    
+    <script>
+        document.getElementById('submitButton').addEventListener('click', function(event) {
+            event.preventDefault(); // Prevent the default anchor behavior
+            var email = document.getElementById('emailInput').value;
+            if (email) {
+                alert('Kiểm tra email của bạn để xem mật khẩu.');
+                window.location.href = "../html/dangnhap.html";
+            } else {
+                alert('Vui lòng nhập địa chỉ email hợp lệ.');
+            }
+        });
+    </script>
+
+</body>
+</html>

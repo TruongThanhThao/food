@@ -1,0 +1,450 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+:root
+{
+    --main-color: #C11F2A;
+    --text--color: #333;
+    --bg--color: #fff;
+
+    --big--font: 4rem;
+    --h2--font: 2.24rem;
+    --p-font: 0.9rem;
+}
+body{
+    color: var(--text--color);
+    background: var(--bg--color);
+    justify-content: center;
+    align-items: center;
+}
+nav{
+    position: fixed;
+    height: 80px;
+    width: 100%;
+    z-index: 1000; /* Đảm bảo thanh nav nằm trên các phần tử khác */
+    background: #fff;
+}
+nav .logo{
+    padding: 0 50px;
+    width: auto;
+    height: 70px;
+}
+nav ul{
+    float: right;
+    margin-right: 20px;
+}
+nav ul li{
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 5px;
+}
+nav ul li a{
+    color: #333;
+    font-size: 17px;
+    padding: 7px 13px;
+}
+nav ul li i{
+    color: #333;
+}
+nav ul li i:hover{
+    color: #C11F2A;
+}
+a:hover{
+    color: #C11F2A;
+}
+.checkbtn{
+    font-size: 30px;
+    color: #9c8f87;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+}
+#check{
+ display: none;
+}
+
+@media(max-with:952px){
+    nav .logo{
+        font-size: 30px;
+        padding-left: 20px;
+    }
+    nav ul li a{
+        font-size: 16px;
+    }
+}
+@media(max-width:858px){
+    .checkbtn{
+        display: block;
+    }
+    ul{
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        top: 80px;
+        left: -100%;
+        text-align: center;
+        background: #EFECEA;
+        transition: all .5s;
+    }
+    nav ul li{
+        display: block;
+        margin: 40px 0;
+        line-height: 30px;
+    }
+    nav ul li a{
+        font-size: 20px;
+    }
+    a:hover,a.active{
+        background: none;
+    }
+    #check:checked ~ ul{
+        left: 0;
+    }
+}
+
+/*footer*/
+footer{
+    background: #EFECEA;
+}
+footer .imgft{
+    width: auto;
+    height: 70px;
+}
+footer .footer-info{
+    display: flex;         
+    justify-content: center; 
+    align-items: center;   
+    padding: 50px 10px 10px 10px;          
+    /* transition: opacity 1s ease, transform 1s ease;
+    opacity: 0;
+    transform: translateY(20px); */
+}
+.a{
+    font-size: 0; /* Loại bỏ khoảng trắng giữa các div */
+    /* transition: opacity 1s ease, transform 1s ease;
+    opacity: 0;
+    transform: translateY(20px); */
+}
+.ft {
+    display: inline-block;
+    vertical-align: top; /* Canh dọc ở đỉnh */
+    width: 33%;
+    font-size: 16px; /* Đặt lại kích thước font */
+    box-sizing: border-box; /* Đảm bảo padding và border không làm thay đổi kích thước của div */
+    padding-top: 15px;
+}
+  
+.footer-lienhe h3, 
+.social-media h3{
+    color: #333;
+    margin: 15px 0 20px; 
+}
+.footer-lienhe a{
+    color: #333;
+}
+.contact-link:hover,
+.footer-lienhe p:hover,
+.footer-lienhe a:hover{
+    color: #C11F2A;
+}
+
+.social-media{
+    margin-top: 2%;
+}
+.social-media a i {
+    font-size: 2.5em; /* Điều chỉnh kích thước icon theo nhu cầu của bạn */
+    margin-right: 10px; /* Tạo khoảng cách giữa các icon */
+    color: #9c8f87; /* Màu icon có thể tùy chỉnh theo nhu cầu */
+    transition: color 0.3s ease;
+}
+.social-media a i:hover{
+    color: #C11F2A;
+}
+
+.social-media a:last-child i {
+    margin-right: 0; /* Xóa khoảng cách cho icon cuối cùng */
+}
+/* Để lại thông tin */
+.form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 10% 10px 5%;
+}
+.form-container input {
+    width: 100%;
+    max-width: 300px;
+    height: 40px;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #9c8f87;
+    box-sizing: border-box;
+    border-radius: 15px;
+}
+button {
+    width: 120px;
+    height: 40px;
+    background: #b09d92;
+    border: none;
+    border-radius: 15px; /* Bo tròn 15px */
+    margin: 2% 2% 2% 0;
+}
+button:hover {
+    background: #9c8f87;
+}
+
+
+/* sản phẩm */
+.flex-box{
+    display: flex;
+    width: auto;
+    padding: 0 8% 0 8%;
+    background: #EFECEA;
+    transition: opacity 1s ease, transform 1s ease;
+    opacity: 0;
+    transform: translateY(20px);
+}
+.flex-box.show{
+    opacity: 1;
+    transform: translateY(0);
+}
+.left{
+    width: 50%;
+}
+
+.big-img{
+    width: 400px;
+}
+.big-img img{
+    width: inherit;
+    height: 400px;
+    object-fit: cover;
+}
+.images{
+    display: flex;
+    justify-content: space-between;
+    width: 50%;
+    margin-top: 15px;
+}
+.small-img{
+    width: 50px;
+    overflow: hidden;
+    /* border: 1.5px solid black; */
+}
+.small-img img{
+    width: inherit;
+    height: 50px;
+    object-fit: cover;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.small-img:hover img{
+    transform: scale(1.2);
+}
+.right{
+    width: 50%;
+}
+.right p{
+    color: #333;
+    line-height: 1.4;
+    text-align: justify;
+}
+.url{
+    font-size: 16px;
+    font-weight: 400;
+    padding-top: 20px;
+}
+.pname{
+    font-size: 30px;
+    font-weight: 600;
+    color: #C11F2A;
+    margin: 30px 0 10px 0;
+}
+.ratings i{
+    color: #F3AC6E; 
+    padding-bottom: 20px;
+}
+.price{
+    font-size: 16px;
+    font-weight: 500;
+    color: #333;
+    margin: 20px 0;
+}
+.quantity{
+    display: flex;
+}
+.quantity p{
+    font-size: 16px;
+    font-weight: 500;
+}
+.quantity input{
+    width: 40px;
+    font-size: 16px;
+    font-weight: 500;
+    text-align: center;
+    margin-left: 15px;
+}
+.btn-box{
+    display: flex;
+    margin-top: 40px;
+}
+.btn-box i:hover{
+    color: #C11F2A;
+}
+.btn-box button{
+    width: auto;
+    height: 40px;
+    background: #b09d92;
+    border: none;
+    border-radius: 15px; /* Bo tròn 15px */
+    /* margin: 2%; */
+    padding: 2%;
+}
+
+.add-cart-btn:hover,
+.buy-now-btn:hover{
+    background-color: #9c8f87;
+}
+
+@media (max-width: 768px) {
+    .flex-box {
+      flex-direction: column;
+      padding: 30px 8%; 
+    }
+  
+    .left, .right {
+      width: 100%; 
+    }
+  
+    .big-img {
+      width: 100%; 
+      height: 100%;
+    }
+  
+    .images {
+      flex-direction: row; 
+      width: auto; 
+      margin-top: 15px;
+    }
+    .small-img {
+        width: 70px; /* Allow small images to adjust width based on screen size */
+        height: 70px;
+        margin-bottom: 15px; /* Add margin between stacked images */
+    }
+  }
+  
+  @media (min-width: 768px) and (max-width: 1024px)  {
+  }
+  
+  @media (min-width: 1024px) {
+  }
+
+
+
+/* Đánh giá sản phẩm */
+.danhgia{
+    padding: 40px 8% 0 8%;
+    background: #EFECEA;
+}
+.danhgia .star{
+    font-size: 2em;
+    color: #F3AC6E;
+    padding: 20px 0 20px 0;
+}
+.danhgia input{
+    width: 100%;
+    height: 100px;
+    border: 1px solid #9c8f87;
+    border-radius: 15px;
+    resize: vertical;
+    padding-left: 2%;
+}
+.btndg{
+    padding-top: 15px;
+}
+
+/* bạn có thể thích */
+.pho{
+    background: #EFECEA;
+}
+.heading {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding-top: 30px;
+    margin: 0 5% 0 5%;
+}
+.pho-container a:hover{
+    background: #b09d92;
+    border-radius: 30px;
+}
+.s-box:hover h3 {
+    color: #fff;
+}
+
+.pho-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px,auto));
+    gap: 1.5rem;
+    margin: 20px 5% 0 5%;
+    padding-bottom: 20px;
+}
+.s-box{
+    text-align: center;
+    padding: 20px 0 20px;
+}
+.s-box img{
+    height: 200px;
+    width: 200px;
+    object-fit: cover;
+    border-radius: 50%;
+    /* padding-bottom: 20px; */
+}
+.s-box h3{
+    margin: 15px 0 10px;
+    color: #9c8f87;
+}
+.s-box p{
+    color: #333;
+    padding-top: 10px;
+}
+.pho i{
+    color: #F3AC6E;
+}
+
+
+
+.search-bar {
+    float: right;  /* Maintains right alignment */
+  width: 100%;  /* Fills the available width */
+  justify-content: space-between; /* Aligns content horizontally within the div */
+  padding: 90px 35px 0 5%;  /* Applies padding */
+  background-color: #EFECEA;
+
+}
+.search-bar i{
+    font-size: 2em;
+    color: #F3AC6E;
+    float: right;
+    padding-left: 60px;
+}
+.search-bar i:hover{
+    color: #C11F2A;
+}
+
+.danhgiamn{
+    padding: 20px 0 20px 0;
+}
+.danhgiamn .a12 i{
+ color: #F3AC6E;
+}
+
+

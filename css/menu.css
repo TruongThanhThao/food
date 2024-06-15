@@ -1,0 +1,504 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+:root
+{
+    --main-color: #C11F2A;
+    --text--color: #333;
+    --bg--color: #fff;
+
+    --big--font: 4rem;
+    --h2--font: 2.24rem;
+    --p-font: 0.9rem;
+}
+body{
+    color: var(--text--color);
+    background: var(--bg--color);
+    justify-content: center;
+    align-items: center;
+}
+nav{
+    position: fixed;
+    height: 80px;
+    width: 100%;
+    z-index: 1000; /* Đảm bảo thanh nav nằm trên các phần tử khác */
+    background: #fff;
+}
+nav .logo{
+    padding: 0 50px;
+    width: auto;
+    height: 70px;
+}
+nav ul{
+    float: right;
+    margin-right: 20px;
+}
+nav ul li{
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 5px;
+}
+nav ul li a{
+    color: #333;
+    font-size: 17px;
+    padding: 7px 13px;
+}
+nav ul li i{
+    color: #333;
+}
+a:hover{
+    color: #C11F2A;
+}
+.checkbtn{
+    font-size: 30px;
+    color: #9c8f87;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+}
+#check{
+ display: none;
+}
+
+@media(max-with:952px){
+    nav .logo{
+        font-size: 30px;
+        padding-left: 20px;
+    }
+    nav ul li a{
+        font-size: 16px;
+    }
+}
+@media(max-width:858px){
+    .checkbtn{
+        display: block;
+    }
+    ul{
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        top: 80px;
+        left: -100%;
+        text-align: center;
+        background: #EFECEA;
+        transition: all .5s;
+    }
+    nav ul li{
+        display: block;
+        margin: 40px 0;
+        line-height: 30px;
+    }
+    nav ul li a{
+        font-size: 20px;
+    }
+    a:hover,a.active{
+        background: none;
+    }
+    #check:checked ~ ul{
+        left: 0;
+    }
+}
+
+
+
+/* Món nước */
+.pho{
+    background: #EFECEA;
+}
+.heading {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding-top: 30px;
+    margin: 0 5% 0 5%;
+    transition: opacity 1s ease, transform 1s ease;
+    opacity: 0;
+    transform: translateY(20px);
+}
+.pho-container a:hover{
+    background: #b09d92;
+    border-radius: 30px;
+}
+.s-box:hover h3 {
+    color: #fff;
+}
+
+.pho-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px,auto));
+    gap: 1.5rem;
+    margin: 20px 5% 0 5%;
+    padding-bottom: 20px;
+    transition: opacity 1s ease, transform 1s ease;
+    opacity: 0;
+    transform: translateY(20px);
+}
+.s-box{
+    text-align: center;
+    padding: 20px 0 20px;
+}
+.s-box img{
+    height: 200px;
+    width: 200px;
+    object-fit: cover;
+    border-radius: 50%;
+    /* padding-bottom: 20px; */
+}
+.s-box h3{
+    margin: 15px 0 10px;
+    color: #9c8f87;
+}
+.s-box p{
+    color: #333;
+    padding-top: 10px;
+}
+i{
+    color: #F3AC6E;
+}
+.pho.show .heading, 
+.pho.show .pho-container{
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+
+/* Gỏi */
+.goi{
+    background: #EFECEA;
+}
+.goi .heading {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding-top: 30px;
+    margin: 0 5% 0 5%;
+    transition: opacity 1s ease, transform 1s ease;
+    opacity: 0;
+    transform: translateY(20px);
+}
+.goi-container a:hover{
+    background: #b09d92;
+    border-radius: 30px;
+}
+
+.goi-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px,auto));
+    gap: 1.5rem;
+    margin: 20px 5% 0 5%;
+    padding-bottom: 20px;
+    transition: opacity 1s ease, transform 1s ease;
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+.goi.show .heading, 
+.goi.show .goi-container{
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+
+/* Mâm cơm */
+.mamcom{
+    background: #EFECEA;
+}
+.mamcom .heading {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding-top: 30px;
+    margin: 0 5% 0 5%;
+    transition: opacity 1s ease, transform 1s ease;
+    opacity: 0;
+    transform: translateY(20px);
+}
+.mamcom-container a:hover{
+    background: #b09d92;
+    border-radius: 30px;
+}
+
+.mamcom-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px,auto));
+    gap: 1.5rem;
+    margin: 20px 5% 0 5%;
+    padding-bottom: 20px;
+    transition: opacity 1s ease, transform 1s ease;
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+.mamcom.show .heading, 
+.mamcom.show .mamcom-container{
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Đồ uống */
+.douong{
+    background: #EFECEA;
+}
+.douong .heading {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding-top: 30px;
+    margin: 0 5% 0 5%;
+    transition: opacity 1s ease, transform 1s ease;
+    opacity: 0;
+    transform: translateY(20px);
+}
+.douong-container a:hover{
+    background: #b09d92;
+    border-radius: 30px;
+}
+
+.douong-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px,auto));
+    gap: 1.5rem;
+    margin: 20px 5% 0 5%;
+    padding-bottom: 20px;
+    transition: opacity 1s ease, transform 1s ease;
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+.douong.show .heading, 
+.douong.show .douong-container{
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Ăn nhẹ */
+.annhe{
+    background: #EFECEA;
+}
+.annhe .heading {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding-top: 30px;
+    margin: 0 5% 0 5%;
+    transition: opacity 1s ease, transform 1s ease;
+    opacity: 0;
+    transform: translateY(20px);
+}
+.annhe-container a:hover{
+    background: #b09d92;
+    border-radius: 30px;
+}
+
+.annhe-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px,auto));
+    gap: 1.5rem;
+    margin: 20px 5% 0 5%;
+    padding-bottom: 20px;
+    transition: opacity 1s ease, transform 1s ease;
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+.annhe.show .heading, 
+.annhe.show .annhe-container{
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/*footer*/
+footer{
+    background: #EFECEA;
+}
+footer .imgft{
+    width: auto;
+    height: 70px;
+}
+footer .footer-info{
+    display: flex;         
+    justify-content: center; 
+    align-items: center;   
+    padding: 50px 10px 10px 10px;          
+    /* transition: opacity 1s ease, transform 1s ease;
+    opacity: 0;
+    transform: translateY(20px); */
+}
+.a{
+    font-size: 0; /* Loại bỏ khoảng trắng giữa các div */
+    /* transition: opacity 1s ease, transform 1s ease;
+    opacity: 0;
+    transform: translateY(20px); */
+}
+.ft {
+    display: inline-block;
+    vertical-align: top; /* Canh dọc ở đỉnh */
+    width: 33%;
+    font-size: 16px; /* Đặt lại kích thước font */
+    box-sizing: border-box; /* Đảm bảo padding và border không làm thay đổi kích thước của div */
+    padding-top: 15px;
+}
+  
+.footer-lienhe h3, .social-media h3{
+    color: #333;
+    margin: 15px 0 20px; 
+}
+.footer-lienhe a{
+    color: #333;
+}
+.contact-link:hover,
+.footer-lienhe p:hover,
+.footer-lienhe a:hover{
+    color: #C11F2A;
+}
+
+.social-media{
+    margin-top: 2%;
+}
+.social-media a i {
+    font-size: 2.5em; /* Điều chỉnh kích thước icon theo nhu cầu của bạn */
+    margin-right: 10px; /* Tạo khoảng cách giữa các icon */
+    color: #9c8f87; /* Màu icon có thể tùy chỉnh theo nhu cầu */
+    transition: color 0.3s ease;
+}
+.social-media a i:hover{
+    color: #C11F2A;
+}
+
+.social-media a:last-child i {
+    margin-right: 0; /* Xóa khoảng cách cho icon cuối cùng */
+}
+/* Để lại thông tin */
+.form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 10% 10px 5%;
+}
+.form-container input {
+    width: 100%;
+    max-width: 300px;
+    height: 40px;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #9c8f87;
+    box-sizing: border-box;
+    border-radius: 15px;
+}
+button {
+    width: 120px;
+    height: 40px;
+    background: #b09d92;
+    border: none;
+    border-radius: 15px; /* Bo tròn 15px */
+    margin: 2%;
+}
+button:hover {
+    background: #9c8f87;
+}
+
+/* .footer.show .footer-info, 
+.footer.show .a, 
+.footer.show button {
+    opacity: 1;
+    transform: translateY(0);
+} */
+
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 100px 35px 0 5%;
+    background-color: #EFECEA;
+
+}
+
+.search-bar select{
+    width: 100%;
+    max-width: 200px;
+    height: 40px;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #9c8f87;
+    box-sizing: border-box;
+    border-radius: 15px;
+}
+.search-bar input {
+    width: 100%;
+    max-width: 300px;
+    height: 40px;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #9c8f87;
+    box-sizing: border-box;
+    border-radius: 15px;
+}
+
+
+.search-bar i{
+    font-size: 2em;
+}
+.search-bar i:hover{
+    color: #C11F2A;
+}
+
+@media(max-width:858px){
+    .search-bar{
+        padding: 90px 5% 0 5%;
+    }
+    .heading,
+    .pho-container,
+    .douong-container,
+    .douong .heading,
+    .goi-container,
+    .goi .heading,
+    .mamcom-container,
+    .mamcom .heading
+    {
+        transition: none;
+        opacity: 1;
+        transform: none;
+    }
+}
+
+/* Backtop */
+#backToTopBtn {
+    display: none; /* Ẩn nút mặc định */
+    position: fixed; /* Cố định nút ở một vị trí cố định */
+    bottom: 20px; /* Cách đáy 20px */
+    right: 20px; /* Cách phải 20px */
+    z-index: 100; /* Đảm bảo nút nằm trên các phần tử khác */
+    background-color: #b09d92; /* Màu nền */
+    color: white; /* Màu chữ */
+    border: none; /* Không viền */
+    padding: 15px; /* Khoảng cách bên trong */
+    border-radius: 50%; /* Bo tròn */
+    cursor: pointer; /* Thay đổi con trỏ khi hover */
+    transition: opacity 0.3s; /* Hiệu ứng mờ dần */
+    font-size: 24px; /* Kích thước font cho biểu tượng */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#backToTopBtn:hover {
+    background-color: #9c8f87; /* Màu nền khi hover */
+}
+html {
+    scroll-behavior: smooth;
+}

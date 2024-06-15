@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="../css/login.css">
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    <title>Đăng ký tài khoản</title>
+</head>
+<body>
+    <!--Navbar-->
+    <nav>
+        <input type="checkbox" id="check">
+        <label for="check" class="checkbtn" >
+            <i class='bx bx-menu'></i>
+        </label>
+        <img class="logo" src="../img/logo.png" alt="Logo">
+        <ul>
+            <li><a href="trangchu.html">Trang chủ</a></li>
+            <li><a href="about.html">Về chúng tôi</a></li>
+            <li><a href="menu.html">Thực đơn</a></li>
+            <li><a href="order.html">Đặt bàn</a></li>
+            <li><a href="contact.html">Liên hệ</a></li>
+            <li><a href="dangnhap.html"><i class='bx bx-user'></i></a></li>
+        </ul>
+    </nav>
+
+
+    <div class="container" id="container">
+        <div class="form-container sign-up">
+            <form>
+            </form>
+        </div>
+        <div class="form-container sign-in">
+            <form>
+                <h1>Tạo tài khoản</h1>
+                <div class="social-icons">
+                    <a href="#" class="icon"><i class='bx bxl-google-plus'></i></box-icon></a>
+                    <a href="#" class="icon"><i class='bx bxl-facebook-circle'></i></i></box-icon></a>
+                    <a href="#" class="icon"><i class='bx bxl-twitter'></i></a>
+                </div>
+                <span>hoặc đăng ký tài khoản với email</span>
+                <input type="text" id="nameInput" placeholder="Tên của bạn">
+                <input type="email" id="emailInput" placeholder="Email">
+                <input type="password" id="passwordInput" placeholder="Mật khẩu">
+                <a href="#" class="button" id="submitButton">Đăng ký</a>
+            </form>
+        </div>
+        <div class="toggle-container">
+            <div class="toggle">
+                <div class="toggle-panel toggle-right">
+                    <h1>Xin chào!</h1>
+                    <p>Bạn đã có tài khoản? Đăng nhập ngay.</p>
+                    <a href="../html/dangnhap.html"><button class="hidden" id="register">Đăng nhập</button></a>
+                </div>
+                <div class="toggle-panel toggle-left">
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        document.getElementById('submitButton').addEventListener('click', function(event) {
+    var nameInput = document.getElementById('nameInput').value.trim();
+    var emailInput = document.getElementById('emailInput').value.trim();
+    var passwordInput = document.getElementById('passwordInput').value.trim();
+    
+    if (nameInput === '' || emailInput === '' || passwordInput === '') {
+        event.preventDefault();  // Ngăn chặn chuyển hướng liên kết
+        alert('Vui lòng nhập đầy đủ tên, email và mật khẩu.');
+    } else {
+        event.preventDefault();  // Ngăn chặn chuyển hướng liên kết
+        alert('Đăng ký tài khoản thành công!');
+        // Chuyển hướng đến trang chủ
+        window.location.href = "../html/trangchu.html";
+    }
+    });
+    </script>
+</body>
+</html>

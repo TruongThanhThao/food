@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phở bò</title>
+    <!--box icon-->
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    <!--css-->
+    <link rel="stylesheet" href="../css/phobo.css">
+</head>
+<body>
+    <!--Navbar-->
+    <nav>
+        <input type="checkbox" id="check">
+        <label for="check" class="checkbtn" >
+            <i class='bx bx-menu'></i>
+        </label>
+        <img class="logo" src="../img/logo.png" alt="Logo">
+        <ul>
+            <li><a href="trangchu.html">Trang chủ</a></li>
+            <li><a href="about.html">Về chúng tôi</a></li>
+            <li><a href="menu.html">Thực đơn</a></li>
+            <li><a href="order.html">Đặt bàn</a></li>
+            <li><a href="contact.html">Liên hệ</a></li>
+            <li><a href="dangnhap.html"><i class='bx bx-user'></i></a></li>
+        </ul>
+    </nav>
+
+
+    <div class="search-bar">
+        <a href="../html/giohang.html" ><i class='bx bx-cart'></i></a>
+        <a href="../html/spuathich.html" style="padding-right: 50px;"><i class='bx bx-heart'></i></a>
+        
+    </div>
+
+
+
+    <div class="flex-box">
+        <div class="left">
+            <div class="big-img">
+                <img src="../img/phở bò.jpg">
+            </div>
+            <div class="images">
+                <div class="small-img">
+                    <img src="../img/phở bò.jpg" onclick="showImg(this.src)">
+                </div>
+                <div class="small-img">
+                    <img src="../img/pho1.jpg" onclick="showImg(this.src)">
+                </div>
+                <div class="small-img">
+                    <img src="../img/pho2.jpg" onclick="showImg(this.src)">
+                </div>
+                <div class="small-img">
+                    <img src="../img/pho3.jpg" onclick="showImg(this.src)">
+                </div>
+            </div>
+        </div>
+
+        <div class="right">
+            <div class="url">Menu > Món nước > Phở bò</div>
+            <div class="pname">Phở bò</div>
+            <div class="ratings">
+                <i class='bx bxs-star'></i>
+                <i class='bx bxs-star'></i>
+                <i class='bx bxs-star'></i>
+                <i class='bx bxs-star'></i>
+                <i class='bx bxs-star'></i>
+            </div>
+            <p>Phở bò là món ăn truyền thống nổi tiếng của Việt Nam, kết hợp bánh phở mềm mịn, nước dùng đậm đà từ xương bò, và thịt bò thái mỏng. Nước dùng thơm ngon được nấu cùng các gia vị như quế, hồi, và gừng. Phở bò thường kèm theo rau sống như húng quế, giá đỗ, và hành tây, mang lại hương vị phong phú và hấp dẫn.</p>
+            <div class="price">Giá: 55 000 vnđ</div>
+            <div class="quantity">
+                <p>Số lượng :</p>
+                <input type="number" min="1" max="5" value="1">
+            </div>
+            <div class="btn-box">
+                <i id="heart-icon" class='bx bx-heart' style="font-size: 2em; padding: 3% 3% 3% 0;" onclick="addToLike({ name:'Phở bò', image:'../img/phở bò.jpg', price: 55000 })"></i> 
+                <button type="button" class="add-cart-btn" onclick="addToCart({ name:'Phở bò', image:'../img/phở bò.jpg', price: 55000 })"><i class='bx bx-cart'></i> Thêm vào giỏ hàng</button>
+                <button type = "button" class = "buy-now-btn"><i class='bx bxl-paypal'></i> Mua ngay</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="danhgia">
+        <h2>Đánh giá sản phẩm</h2>
+        <div class="danhgiamn">
+            <div class="a12" style="padding-bottom: 20px;">
+                <p style="color: #C11F2A;">Thanh Hà</p>
+                <div class="sao">
+                    <i class='bx bxs-star'></i>
+                    <i class='bx bxs-star'></i>
+                    <i class='bx bxs-star'></i>
+                    <i class='bx bxs-star'></i>
+                    <i class='bx bxs-star'></i>
+                </div>
+                <p>Tôi rất thích món phở bò.</p> 
+            </div>
+            <div class="a12">
+                <p style="color: #C11F2A;">Huyền Trang</p>
+                <div class="sao">
+                    <i class='bx bxs-star'></i>
+                    <i class='bx bxs-star'></i>
+                    <i class='bx bxs-star'></i>
+                    <i class='bx bxs-star'></i>
+                    <i class='bx bxs-star'></i>
+                </div>
+                <p>Món phở đậm đà, rất ngon!</p> 
+            </div>
+        </div>
+        <h3>Viết đánh giá của bạn</h3>
+        <div class="star">
+            <i class='bx bx-star'></i>
+            <i class='bx bx-star'></i>
+            <i class='bx bx-star'></i>
+            <i class='bx bx-star'></i>
+            <i class='bx bx-star'></i>
+        </div>
+        <input type="text" placeholder="Viết đánh giá của bạn" id="input-field">
+        <div class="btndg">
+            <button id="submit-button">Gửi</button>
+            <button id="cancel-button">Hủy</button>
+        </div>
+    </div>
+
+    <section class="pho" id="pho">
+        <div class="heading">
+            <h2>Bạn có thể thích</h1>
+        </div>
+
+        <div class="pho-container">
+            <a href="#bunrieucua" class="s-box">
+                <img src="../img/bún riêu cua.jpg" alt="">
+                <h3>Bún riêu cua</h3>
+                <i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i>
+                <p class="price">Giá: 50 000 vnđ</p>
+            </a>
+            <a href="#phoga" class="s-box">
+                <img src="../img/phở gà.jpg" alt="">
+                <h3>Phở gà</h3>
+                <i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i>
+                <p class="price">Giá: 50 000 vnđ</p>
+            </a>
+            <a href="#photronnambo" class="s-box">
+                <img src="../img/phở trộn Nam Bộ.jpg" alt="">
+                <h3>Phở trộn Nam Bộ</h3>
+                <i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star-half' ></i>
+                <p class="price">Giá: 40 000 vnđ</p>
+            </a>
+            <a href="#bunbohue" class="s-box">
+                <img src="../img/bún bò Huế.jpg" alt="">
+                <h3>Bún bò Huế</h3>
+                <i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i>
+                <p class="price">Giá: 70 000 vnđ</p>
+            </a>
+        </div>        
+    </section>
+
+
+
+
+
+    <footer>
+        <div class="footer">
+            <div class="footer-info" style="border-bottom: 1px solid #9c8f87;">
+                <img src="../img/logo.png" class="imgft">
+            </div>
+            <div class="a">
+                <div class="ft" style="padding: 20px 0 0 8%;">
+                    <div class="footer-lienhe">
+                        <h3>Thông tin liên hệ</h3>
+                        <a href="https://maps.app.goo.gl/5croaENqXXNmxHw36"><i class='bx bxs-map' style="padding-right: 10px;"></i>25 Nguyễn Trường Tộ, Ba Đình, Hà Nội.</a>
+                        <p style="padding: 10px 0 10px;"> <i class='bx bxs-phone' style="padding-right: 10px;"></i>Điện thoại: 0123 456 789</p>
+                        <a href="https://mail.google.com/mail/u/0/#inbox"><i class='bx bxs-envelope' style="padding-right: 10px;"></i>Email: viHaNoi@gamil.com</a>
+                    </div>
+                </div>
+                <div class="ft" style="padding-left: 12%;">
+                    <div class="social-media">
+                        <h3>Mạng xã hội</h3>
+                        <a href=""><i class='bx bxl-facebook-circle'></i></a>
+                        <a href=""><i class='bx bxl-instagram-alt' ></i></a>
+                        <a href=""><i class='bx bxl-twitter'></i></a>
+                    </div>
+                </div>
+                <div class="ft">
+                    <div class="form-container">
+                        <p style="padding-bottom: 10px;">Để lại thông tin để được nhận tư vấn!</p>
+                        <input type="text" placeholder="Tên của bạn">
+                        <input type="text" placeholder="Số điện thoại">
+                        <button id="btngui">Gửi thông tin</button></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/phobo.js"></script>
+</body>
+</html>

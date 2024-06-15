@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giỏ hàng</title>
+    <link rel="stylesheet" href="../css/giohang.css">
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css"><!--icon-->
+
+</head>
+<body>
+    <nav>
+        <input type="checkbox" id="check">
+        <label for="check" class="checkbtn" >
+            <i class='bx bx-menu'></i>
+        </label>
+        <img class="logo" src="../img/logo.png" alt="Logo">
+        <ul>
+            <li><a href="trangchu.html">Trang chủ</a></li>
+            <li><a href="about.html">Về chúng tôi</a></li>
+            <li><a href="menu.html">Thực đơn</a></li>
+            <li><a href="order.html">Đặt bàn</a></li>
+            <li><a href="contact.html">Liên hệ</a></li>
+            <li><a href="dangnhap.html"><i class='bx bx-user'></i></a></li>
+        </ul>
+    </nav>
+
+    <div class="search-bar">
+        <a href="../html/giohang.html" ><i class='bx bx-cart'></i></a>
+        <a href="../html/spuathich.html" style="padding-right: 50px;"><i class='bx bx-heart'></i></a>
+        
+    </div>
+
+    <!--Shopping cart-->
+    <div class="cart-container">
+        <h2 style="text-align: center;">Giỏ của bạn</h2>
+        <div id="cart-items"></div>
+        <div style="text-align: right;">
+            <div id="cart-total">Tổng tiền: 0 VNĐ</div>
+            <button type="button" onclick="clearCart()" class="luachon" style="margin-right: 2%;">Xóa tất cả sản phẩm</button>
+            <a href="../html/thanhtoan.html"><button type="button" onclick="gotoCheckout()" class="luachon">Thanh toán</button></a>
+        </div>
+    </div>
+    
+
+    <footer>
+        <div class="footer">
+            <div class="footer-info" style="border-bottom: 1px solid #9c8f87;">
+                <img src="../img/logo.png" class="imgft">
+            </div>
+            <div class="a">
+                <div class="ft" style="padding: 20px 0 0 8%;">
+                    <div class="footer-lienhe">
+                        <h3>Thông tin liên hệ</h3>
+                        <a href="https://maps.app.goo.gl/5croaENqXXNmxHw36"><i class='bx bxs-map' style="padding-right: 10px;"></i>25 Nguyễn Trường Tộ, Ba Đình, Hà Nội.</a>
+                        <p style="padding: 10px 0 10px;"> <i class='bx bxs-phone' style="padding-right: 10px;"></i>Điện thoại: 0123 456 789</p>
+                        <a href="https://mail.google.com/mail/u/0/#inbox"><i class='bx bxs-envelope' style="padding-right: 10px;"></i>Email: viHaNoi@gamil.com</a>
+                    </div>
+                </div>
+                <div class="ft" style="padding-left: 12%;">
+                    <div class="social-media">
+                        <h3>Mạng xã hội</h3>
+                        <a href=""><i class='bx bxl-facebook-circle'></i></a>
+                        <a href=""><i class='bx bxl-instagram-alt' ></i></a>
+                        <a href=""><i class='bx bxl-twitter'></i></a>
+                    </div>
+                </div>
+                <div class="ft">
+                    <div class="form-container">
+                        <p style="padding-bottom: 10px;">Để lại thông tin để được nhận tư vấn!</p>
+                        <input type="text" placeholder="Tên của bạn">
+                        <input type="text" placeholder="Số điện thoại">
+                        <button id="btngui">Gửi thông tin</button></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="../js/giohang.js"></script>
+</body>
+</html>

@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thực đơn</title>
+    <!--box icon-->
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    <!--css-->
+    <link rel="stylesheet" href="../css/menu.css">
+</head>
+<body>
+    <!--Navbar-->
+    <nav>
+        <input type="checkbox" id="check">
+        <label for="check" class="checkbtn" >
+            <i class='bx bx-menu'></i>
+        </label>
+        <img class="logo" src="../img/logo.png" alt="Logo">
+        <ul>
+            <li><a href="trangchu.html">Trang chủ</a></li>
+            <li><a href="about.html">Về chúng tôi</a></li>
+            <li><a href="menu.html">Thực đơn</a></li>
+            <li><a href="order.html">Đặt bàn</a></li>
+            <li><a href="contact.html">Liên hệ</a></li>
+            <li><a href="dangnhap.html"><i class='bx bx-user'></i></a></li>
+        </ul>
+    </nav>
+
+
+
+    <div class="search-bar" style="border-bottom: 1px solid #9c8f87; padding-bottom: 40px;">
+        <p style="color: black; font-size: 1.2em">Bộ lọc: </p>
+        <select id="category">
+            <option value="">Loại thực đơn</option>
+            <option value="">Món nước</option>
+            <option value="">Gỏi</option>
+            <option value="">Mâm cơm</option>
+            <option value="">Đồ uống</option>
+            <option value="">Ăn nhẹ</option>
+        </select>
+        
+        <select id="price-filter">
+            <option value="">Giá</option>
+            <option value="">0 - 100 000 VND</option>
+            <option value="">100 000 - 200 000VND</option>
+            <option value="">200 000 - 500 000 VND</option>
+        </select>
+        
+        <input type="text" id="searchKeyword" placeholder="Nhập từ khóa...">
+        
+        <i class='bx bx-search' id="searchIcon"></i>
+        <a href="../html/spuathich.html"><i class='bx bx-heart'></i></a>
+        <a href="../html/giohang.html"><i class='bx bx-cart'></i></a>
+    </div>
+
+    <!--Ăn nhẹ-->
+    <section class="annhe" id="annhe">
+        <div class="heading">
+            <h1 style="color: #C11F2A; padding-bottom: 20px; font-size: 2.5em;">Ăn nhẹ</h1>
+            <span style="color: black; padding-bottom: 20px;">Thưởng thức các món ăn nhẹ truyền thống với chè ngọt dịu, bánh cốm dẻo thơm, và bánh đúc mềm mịn, mang đậm hương vị Việt Nam.</span>
+        </div>
+
+        <div class="annhe-container" style="border-bottom: 1px solid #9c8f87; padding-bottom: 40px;">
+            <a href="#chelongnhan" class="s-box">
+                <img src="../img/chè sen long nhãn.jpg" alt="">
+                <h3>Chè long nhãn</h3>
+                <i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star-half' ></i>
+                <p class="price">Giá: 35 000 vnđ</p>
+            </a>
+            <a href="#chekhucbach" class="s-box">
+                <img src="../img/chè khúc bạch.jpg" alt="">
+                <h3>Chè khúc bạch</h3>
+                <i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i>
+                <p class="price">Giá: 35 000 vnđ</p>
+            </a>
+            <a href="#chebuoi" class="s-box">
+                <img src="../img/chè bưởi.jpg" alt="">
+                <h3>Chè bưởi</h3>
+                <i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i>
+                <p class="price">Giá: 33 000 vnđ</p>
+            </a>
+            <a href="#com" class="s-box">
+                <img src="../img/cốm.jpg" alt="">
+                <h3>Cốm</h3>
+                <i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star-half' ></i>
+                <p class="price">Giá: 38 000 vnđ</p>
+            </a>
+            <a href="#banhxeo" class="s-box">
+                <img src="../img/bánh xèo.jpg" alt="">
+                <h3>Bánh xèo</h3>
+                <i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star-half' ></i>
+                <p class="price">Giá: 55 000 vnđ</p>
+            </a>
+            <a href="#banhtrangtron" class="s-box">
+                <img src="../img/bánh tráng trộn.jpg" alt="">
+                <h3>Bánh tráng trộn</h3>
+                <i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i>
+                <p class="price">Giá: 45 000 vnđ</p>
+            </a>
+            <a href="#banhcom" class="s-box">
+                <img src="../img/bánh cốm.jpg" alt="">
+                <h3>Bánh cốm</h3>
+                <i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i>
+                <p class="price">Giá: 45 000 vnđ</p>
+            </a>
+            <a href="#banhduc" class="s-box">
+                <img src="../img/bánh đúc nóng.jpg" alt="">
+                <h3>Bánh đúc</h3>
+                <i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star-half' ></i>
+                <p class="price">Giá: 45 000 vnđ</p>
+            </a>
+        </div>        
+     </section>
+
+
+
+    <!--Đồ uống-->
+    <section class="douong" id="douong">
+        <div class="heading">
+            <h1 style="color: #C11F2A; padding-bottom: 20px; font-size: 2.5em;">Đồ uống</h1>
+            <span style="color: black; padding-bottom: 20px;">Thưởng thức sự tươi mới và hấp dẫn của đồ uống tại quán, từ những ly cà phê đậm đà đến các loại trà thơm ngon và các đồ uống trái cây tươi mát, chắc chắn sẽ làm hài lòng mọi thực khách.</span>
+        </div>
+
+        <div class="douong-container" style="border-bottom: 1px solid #9c8f87; padding-bottom: 40px;">
+            <a href="#capheda" class="s-box">
+                <img src="../img/iced coffee.jpg" alt="">
+                <h3>Cà phê đá</h3>
+                <i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star-half' ></i>
+                <p class="price">Giá: 40 000 vnđ</p>
+            </a>
+            <a href="#caphetrung" class="s-box">
+                <img src="../img/egg coffee.jpg" alt="">
+                <h3>Cà phê trứng</h3>
+                <i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i>
+                <p class="price">Giá: 50 000 vnđ</p>
+            </a>
+            <a href="#caphephin" class="s-box">
+                <img src="../img/cà phê phin.jpg" alt="">
+                <h3>Cà phê phin</h3>
+                <i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i>
+                <p class="price">Giá: 45 000 vnđ</p>
+            </a>
+            <a href="#bacsiu" class="s-box">
+                <img src="../img/bạc sỉu.jpg" alt="">
+                <h3>Bạc sỉu</h3>
+                <i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star-half' ></i>
+                <p class="price">Giá: 45 000 vnđ</p>
+            </a>
+            <a href="#chesen" class="s-box">
+                <img src="../img/ấm chè sen.jpg" alt="">
+                <h3>Chè sen</h3>
+                <i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star-half' ></i>
+                <p class="price">Giá: 85 000 vnđ</p>
+            </a>
+            <a href="#traman" class="s-box">
+                <img src="../img/ấm trà mạn.jpg" alt="">
+                <h3>Trà mạn</h3>
+                <i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i>
+                <p class="price">Giá: 85 000 vnđ</p>
+            </a>
+            <a href="#biatrucbach" class="s-box">
+                <img src="../img/bia trúc bạch.jpg" alt="">
+                <h3>Bia trúc bạch</h3>
+                <i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i>
+                <p class="price">Giá: 30 000 vnđ</p>
+            </a>
+            <a href="#biahoi" class="s-box">
+                <img src="../img/bia hơi.jpg" alt="">
+                <h3>Bia hơi</h3>
+                <i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star-half' ></i>
+                <p class="price">Giá: 25 000 vnđ</p>
+            </a>
+        </div>        
+    </section>
+
+    <!--Món nước-->
+    <section class="pho" id="pho">
+        <div class="heading">
+            <h1 style="color: #C11F2A; padding-bottom: 20px; font-size: 2.5em;">Món nước</h1>
+            <span style="color: black; padding-bottom: 20px;">Nhắc đến Hà Nội là nhắc đến những món nước - biểu tượng ẩm thực truyền thống. Hãy khám phá thực đơn của chúng tôi và thưởng thức những món bún, phở đặc sắc, tinh túy nhất của Hà thành.</span>
+        </div>
+
+        <div class="pho-container" style="border-bottom: 1px solid #9c8f87; padding-bottom: 40px;">
+            <a href="../html/phobo.html" class="s-box">
+                <img src="../img/phở bò.jpg" alt="">
+                <h3>Phở bò</h3>
+                <i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i>
+                <p class="price">Giá: 55 000 vnđ</p>
+            </a>
+            <a href="#phoga" class="s-box">
+                <img src="../img/phở gà.jpg" alt="">
+                <h3>Phở gà</h3>
+                <i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i>
+                <p class="price">Giá: 50 000 vnđ</p>
+            </a>
+            <a href="#photronnambo" class="s-box">
+                <img src="../img/phở trộn Nam Bộ.jpg" alt="">
+                <h3>Phở trộn Nam Bộ</h3>
+                <i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star-half' ></i>
+                <p class="price">Giá: 40 000 vnđ</p>
+            </a>
+            <a href="#bunbohue" class="s-box">
+                <img src="../img/bún bò Huế.jpg" alt="">
+                <h3>Bún bò Huế</h3>
+                <i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i>
+                <p class="price">Giá: 70 000 vnđ</p>
+            </a>
+            <a href="#buncha" class="s-box">
+                <img src="../img/buncha.png" alt="">
+                <h3>Bún chả</h3>
+                <i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i>
+                <p class="price">Giá: 45 000 vnđ</p>
+            </a>
+            <a href="#bunrieucua" class="s-box">
+                <img src="../img/bún riêu cua.jpg" alt="">
+                <h3>Bún riêu cua</h3>
+                <i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i>
+                <p class="price">Giá: 50 000 vnđ</p>
+            </a>
+            <a href="#bundaumamtom" class="s-box">
+                <img src="../img/bundau.jpg" alt="">
+                <h3>Bún đậu mắm tôm</h3>
+                <i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star-half' ></i>
+                <p class="price">Giá: 65 000 vnđ</p>
+            </a>
+            <a href="#bunchahangthan" class="s-box">
+                <img src="../img/bún chả Hàng Than.jpg" alt="">
+                <h3>Bún chả than</h3>
+                <i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i>
+                <p class="price">Giá: 70 000 vnđ</p>
+            </a>
+        </div>        
+     </section>
+
+     <!--Gỏi-->
+    <section class="goi" id="goi">
+        <div class="heading">
+            <h1 style="color: #C11F2A; padding-bottom: 20px; font-size: 2.5em;">Gỏi</h1>
+            <span style="color: black; padding-bottom: 20px;">Thưởng thức hương vị tươi mát của các món gỏi - một sự kết hợp hoàn hảo của rau củ quả và sốt gỏi đặc biệt của chúng tôi.</span>
+        </div>
+
+        <div class="goi-container" style="border-bottom: 1px solid #9c8f87; padding-bottom: 40px;">
+            <a href="#phocuon" class="s-box">
+                <img src="../img/phở cuốn.jpg" alt="">
+                <h3>Phở cuốn</h3>
+                <i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star-half' ></i>
+                <p class="price">Giá: 55 000 vnđ</p>
+            </a>
+            <a href="#phonem" class="s-box">
+                <img src="../img/nem truyền thống.jpg" alt="">
+                <h3>Nem truyền thống</h3>
+                <i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i>
+                <p class="price">Giá: 55 000 vnđ</p>
+            </a>
+            <a href="#goinanbo" class="s-box">
+                <img src="../img/gỏi nạm bò.jpg" alt="">
+                <h3>Gỏi nạn bò</h3>
+                <i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star-half' ></i>
+                <p class="price">Giá: 75 000 vnđ</p>
+            </a>
+            <a href="#goicuontomthit" class="s-box">
+                <img src="../img/gỏi cuốn tôm thịt.jpg" alt="">
+                <h3>Gỏi cuốn tôm thịt</h3>
+                <i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i>
+                <p class="price">Giá: 60 000 vnđ</p>
+            </a>
+            <a href="#goingosen" class="s-box">
+                <img src="../img/gỏi ngó sen tôm thịt.jpg" alt="">
+                <h3>Gỏi ngó sen</h3>
+                <i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star-half' ></i>
+                <p class="price">Giá: 65 000 vnđ</p>
+            </a>
+            <a href="#nemlui" class="s-box">
+                <img src="../img/cuốn nem lụi.jpg" alt="">
+                <h3>Nem lụi</h3>
+                <i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i>
+                <p class="price">Giá: 75 000 vnđ</p>
+            </a>
+            <a href="#goica" class="s-box">
+                <img src="../img/cuốn cá nướng.jpg" alt="">
+                <h3>Gỏi cá</h3>
+                <i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star-half' ></i>
+                <p class="price">Giá: 112 000 vnđ</p>
+            </a>
+            <a href="#goitron" class="s-box">
+                <img src="../img/goitom.jpg" alt="">
+                <h3>Gỏi trộn</h3>
+                <i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i>
+                <p class="price">Giá: 45 000 vnđ</p>
+            </a>
+        </div>        
+     </section>
+
+     <!--Mâm cơm-->
+    <section class="mamcom" id="mamcom">
+        <div class="heading">
+            <h1 style="color: #C11F2A; padding-bottom: 20px; font-size: 2.5em;">Mâm cơm</h1>
+            <span style="color: black; padding-bottom: 20px;">Khám phá hương vị truyền thống và đa dạng của ẩm thực Việt Nam qua mâm cơm đặc biệt của chúng tôi, bao gồm các món chính phong phú, rau sống tươi mát và cơm nếp thơm dẻo.</span>
+        </div>
+
+        <div class="mamcom-container">
+            <a href="#thitkhotau" class="s-box">
+                <img src="../img/thịt kho tàu.jpg" alt="">
+                <h3>Thịt kho tàu</h3>
+                <i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star-half' ></i>
+                <p class="price">Giá: 123 000 vnđ</p>
+            </a>
+            <a href="#canhkhoqua" class="s-box">
+                <img src="../img/canh khổ qua.jpg" alt="">
+                <h3>Canh khổ qua</h3>
+                <i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star-half' ></i>
+                <p class="price">Giá: 45 000 vnđ</p>
+            </a>
+            <a href="#calangomchuoidau" class="s-box">
+                <img src="../img/cá lăng om chuối đậu.jpg" alt="">
+                <h3>Cá lăng om chuối đậu</h3>
+                <i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i>
+                <p class="price">Giá: 185 000 vnđ</p>
+            </a>
+            <a href="#comtam" class="s-box">
+                <img src="../img/cơm tấm.jpg" alt="">
+                <h3>Cơm tấm</h3>
+                <i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i>
+                <p class="price">Giá: 85 000 vnđ</p>
+            </a>
+        </div>        
+     </section>
+
+
+
+     <footer>
+        <div class="footer">
+            <div class="footer-info" style="border-bottom: 1px solid #9c8f87;">
+                <img src="../img/logo.png" class="imgft">
+            </div>
+            <div class="a">
+                <div class="ft" style="padding: 20px 0 0 8%;">
+                    <div class="footer-lienhe">
+                        <h3>Thông tin liên hệ</h3>
+                        <a href="https://maps.app.goo.gl/5croaENqXXNmxHw36"><i class='bx bxs-map' style="padding-right: 10px; color: #333;"></i>25 Nguyễn Trường Tộ, Ba Đình, Hà Nội.</a>
+                        <p style="padding: 10px 0 10px;"> <i class='bx bxs-phone' style="padding-right: 10px; color: #333;"></i>Điện thoại: 0123 456 789</p>
+                        <a href="https://mail.google.com/mail/u/0/#inbox"><i class='bx bxs-envelope' style="padding-right: 10px; color: #333;"></i>Email: viHaNoi@gamil.com</a>
+                    </div>
+                </div>
+                <div class="ft" style="padding-left: 12%;">
+                    <div class="social-media">
+                        <h3>Mạng xã hội</h3>
+                        <a href=""><i class='bx bxl-facebook-circle'></i></a>
+                        <a href=""><i class='bx bxl-instagram-alt' ></i></a>
+                        <a href=""><i class='bx bxl-twitter'></i></a>
+                    </div>
+                </div>
+                <div class="ft">
+                    <div class="form-container">
+                        <p style="padding-bottom: 10px;">Để lại thông tin để được nhận tư vấn!</p>
+                        <input type="text" placeholder="Tên của bạn">
+                        <input type="text" placeholder="Số điện thoại">
+                        <button id="btngui">Gửi thông tin</button></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <div id="backToTopBtn"><i class='bx bx-chevrons-up' style="color: #fff;"></i></div>
+
+    <script src="../js/menu.js"></script>
+</body>
+</html>
